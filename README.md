@@ -1,106 +1,33 @@
-<p align="left"><img src="https://cdn-images-1.medium.com/max/184/1*2GDcaeYIx_bQAZLxWM4PsQ@2x.png"></p>
+OBJETIVOS
+- Limpiar tabla mediante querys de SQL para poder trabajar con ella en Power BI o Tableau
+- Realizar los gráficos pertinentes para poder conseguir un dashboard explicatorio
 
-# __ih_datamadpt1121_project_m2__
+ENV
+We have created a new environment (project2) and installed and import (import + "name of the library") therein the following library:
+- Python 3.7 (conda install python == 3.7)
+- Pandas (conda install pandas)
+- Sqlalchemy (conda install sqlalchemy)
+- Sqlite 3 (conda install sqlite)
 
-![Image](https://github.com/ih-datapt-mad/ih_datamadpt1121_project_m2/blob/main/images/visuals.jpg)
+CODE
+- Importar database:
+     - diamonds_m2
+Después de importar la base de datos, hemos realizado inner joins para conseguir una nueva tabla, la cual hemos sacado a partir de un dataframe con Pandas, conectandonos a la base de datos.
 
-Data analytics is oftentimes referred to as business intelligence, BI development, or product analytics. However, that is just the tip of the iceberg since the data analytics process includes activities such as data formation/creation, data cleansing, exploratory data analysis (especially this part), feature engineering, and interpretation of suggestions/predictions/results derived from advanced modelling analysis (i.e.: Machine Learning).
+Posteriormente hemos guardado el dataframe como CSV para poder comenzar a trabajar con el en Power BI.
 
-For this project you will perform some of these activities in order to analyse the [__diamonds_m2.db__](https://github.com/ih-datapt-mad/ih_datamadpt1121_project_m2/blob/main/db/diamonds_m2.db) `SQLite` database.
+En Power BI, para nuestro gráfico, los valores que hemos tomado han sido Ciudad, Precio y media de quilares por corte, por claridad y color.
 
+He dejado a parte de este dashboard las dimensiones (Depth, table) debido a que, en las muestras de nuestra tabla, todas comprendían el rango de los que se considera ideal, en torno a un 50% y 60%.
 
-```
-conda install -c anaconda sqlite
-```
+De lo que hemos observado, el precio del diamante, depende en mayor medida del número de quilates, seguido del corte que tenga éste, siendo mejores, los cortes premium, ideal, very Good… aunque existen casos en los cuales el precio es inferior a pesar del corte, debido al menor número de muestras. Asimismo, en menor medida influyen claridad y color.
 
+En cuanto al color, los que normalmente utilizan las grandes marcas son DEF (Sin color) Y GHIJ (Casi sin color). Estos son los que se muestran en nuestra tabla, sin tener muestras de colores amarillos que son de menor calidad, por lo que no podemos considerarlo un factor determinante en el precio. 
 
----
+La claridad, los mejores son FL, de los cuales no tenemos ninguna muestra, IF, VVS1 y VVS2, seguidos de VS1, VS2, SI1… aunque existen casos que, con una claridad IF, el precio es inferior a un SI1, esto se debe a que hay un menor número de IF que de SI1, por lo que el número de quilates disminuye y con ello, el precio.
 
+Otro factor importante, es que, normalmente, las cualidades van ligadas entre sí, un diamante premium, suele tener un mayor número de quilates, una mayor claridad y prácticamente sin color, por lo que el precio será más alto.
 
-
-## **Deliverables:**
-
-A GitHub repository including:
-
-- `exploratory analysis` files that holds the results of __Challenge 1__. 
-
-- `BI Report/Dashboard` meeting the requeriments specified in __Challenge 2__.
-
-- `README.md` file explaining the job done and your main conclusions. You may find more info of how to build a README file [here](https://github.com/potacho/data-project-template/blob/master/README.md).
-
-
-
----
+En resumen, la cualidad predominante para el incremento del precio de los diamantes es el quilate, aunque se dan casos, como comentabamos, en los cuales el precio puede disminuir o incrementar dependiendo de la claridad o corte.
 
 
-
-## **Presentation:**
-
-- __Time:__ 4 minutes sharp.
-- __Content:__ explain why your dashboard funtionalities are the best for getting meaningful data insights. Support your arguments on the conclusions obtained from the __exploratory analysis__. Conclude your pitch telling us (_in one sentence_) the most important insight (_under your criteria_) you've extracted.
-
-<p align="center"><img src="https://media.giphy.com/media/1Ygis29YXMS35cW90I/giphy.gif"></p>
-
-
-> __IMPORTANT NOTE:__ You only need your BI Report/Dashboard for the presentation (i.e.: no Jupyter, no PowerPoint/Canva)
-
-
-
----
-
-
-
-## __Challenge 1: Data Exploration and Preparation__
-
-The goal of this challenge is to perform an __exploratory analysis__ in order to gain initial insight on our diamonds database and prepare the __data model__ that better fits your visualizations. You may use any ETL tool from those explained in class (i.e.: Pandas, PowerQuery, Tableau Public). 
-
-<p align="center"><img src="https://media.giphy.com/media/iP1qEUE7VKhLq/giphy.gif"></p>
-
-> **IMPORTANT NOTE:** You may use any tool and/or workflow that you find more convenient in order to provide the requested output. 
-
-
-
----
-
-
-
-## **Challenge 2: BI Report/Dashboard**
-
-BI Reports and Dashboards are powerful tools for communicating important information __at-a-glance__. The goal of this challenge is to build a BI Report/Dashboard using our diamonds database that will help the final user (i.e.: yourself) to perform better during _Module 3 project (Kaggle Competition)_. 
-
-> __Tip:__ you should first consider which data and which indicators should be put on the BI Report/Dashboard. Then, decompose the key indicators from multiple dimensions. 
-
-<p align="center"><img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif"></p>
-
-
-A BI Report/Dashboard is not exactly a sequential set of descriptive charts like those you have may built in challenge 1 during the analysis. Instead, a BI Report/Dashboard should be __a single interactive interface built around a specific objetive and which components are logically arranged in order to provide data relevant insights effectively__. Therefore, bear in mind the main objective of the competition: _understand the relationship between diamonds attributes (features) or group of attributes, and its price_.
-
-
-
----
-
-
-
-## **References:**
-
-- [SQLite](https://www.sqlite.org/index.html)
-
-- [SQLAlchemy](https://docs.sqlalchemy.org/en/14/core/engines.html)
-
-- [Visual Analysis Best Practices](https://github.com/ih-datapt-mad/ih_datamadpt1121_project_m2/blob/main/images/visual-analysis-guidebook.pdf)
-
-- [Financial Times Visual Vocabulary](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary)
-
-- [Matplotlib](https://matplotlib.org/stable/api/index)
-
-- [Pandas Visualization](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html)
-
-- [Seaborn](https://seaborn.pydata.org/api.html)
-
-- [Plotly](https://plotly.com/graphing-libraries/)
-
-- [Cufflinks](https://coderzcolumn.com/tutorials/data-science/cufflinks-how-to-create-plotly-charts-from-pandas-dataframe-with-one-line-of-code)
-
-- [Tableau](https://github.com/ih-datapt-mad/dataptmad1121_lessons/blob/main/module-2/visualization_tableau.md)
-
-- [Power BI](https://github.com/potacho/power_bi_workshop)
