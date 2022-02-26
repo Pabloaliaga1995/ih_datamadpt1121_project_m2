@@ -3,7 +3,7 @@ OBJETIVOS
 - Realizar los gráficos pertinentes para poder conseguir un dashboard explicatorio
 
 ENV
-We have created a new environment (project2) and installed and import (import + "name of the library") therein the following library:
+Hemos creado un nuevo entorno (project2), instalado e importado (import + "name of the library") en la librería:
 - Python 3.7 (conda install python == 3.7)
 - Pandas (conda install pandas)
 - Sqlalchemy (conda install sqlalchemy)
