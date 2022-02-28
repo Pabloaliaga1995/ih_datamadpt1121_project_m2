@@ -1,9 +1,9 @@
 OBJETIVOS
-- Limpiar tabla mediante querys de SQL para poder trabajar con ella en Power BI o Tableau
+- Limpiar tabla mediante queries de SQL para poder trabajar con ella en Power BI o Tableau
 - Realizar los gráficos pertinentes para poder conseguir un dashboard explicatorio
 
 ENV
-Hemos creado un nuevo entorno (project2), instalado e importado (import + "name of the library") en en entorno:
+Hemos creado un nuevo entorno (project2), instalado e importado (import + "name of the library") en el:
 - Python 3.7 (conda install python == 3.7)
 - Pandas (conda install pandas)
 - Sqlalchemy (conda install sqlalchemy)
@@ -17,11 +17,11 @@ Después de importar la base de datos, mediante inner joins hemos conseguido una
 
 Posteriormente hemos guardado el dataframe como CSV para poder comenzar a trabajar con el en Power BI.
 
-Con el nuevo dataframe en CSV, los valores que hemos tomado para nuestro Dashbpard han sido Ciudad, Precio y media de quilares por corte, por claridad y color.
+Con el nuevo dataframe en CSV, los valores que hemos tomado para nuestro Dashboard han sido Ciudad, Precio y media de quilares por corte, por claridad y color.
 
-No hemos considerado en este dashboard las dimensiones (Depth, Table) debido a que en las muestras de nuestra tabla, todas comprendían el rango de los que se considera ideal, en torno a un 50% y 60%.
+No hemos considerado en este dashboard las dimensiones (Depth, Table) debido a que, en las muestras de nuestra tabla, todas comprendían el rango de lo que se considera ideal, en torno a un 50% y 60%.
 
-Después de observar los valores, hemos llegado a la conclusión de que el precio del diamante depende en mayor medida del número de quilates, seguido del corte que tenga éste, siendo mejores los cortes premium, ideal, very Good… aunque existen casos en los cuales el precio es inferior a pesar del corte, debido al menor número de muestras. Asimismo, en menor medida influyen claridad y color.
+Después de observar los valores, hemos llegado a la conclusión de que el precio del diamante depende en mayor medida del número de quilates, seguido del corte que tenga éste, siendo mejores los cortes premium, ideal, very Good… aunque existen casos en los cuales el precio es inferior a pesar del corte, debido al menor número de muestras. Asimismo, influyen en menor medida claridad y color.
 
 En cuanto al color, los que normalmente utilizan las grandes marcas son DEF (Sin color) Y GHIJ (Casi sin color). Estos son los que encontramos en nuestra tabla, ya que no dispone de  muestras de colores amarillos que son de menor calidad, por lo que no podemos considerarlo un factor determinante en el precio. 
 
